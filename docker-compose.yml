@@ -1,0 +1,13 @@
+version: "3.1"
+
+services:
+  webserver:
+    image: nginx
+    ports:
+      - 8080:8080
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+  app:
+    image: patriciocostilla/flask
+    volumes:
+      - ./app/todos.sqlite3:/app/todos.sqlite3

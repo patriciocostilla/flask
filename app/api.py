@@ -46,4 +46,5 @@ def todo(id):
         delete(id)
         return "", 200
 
-app.run()
+if __name__ == "__main__":
+    app.run()
